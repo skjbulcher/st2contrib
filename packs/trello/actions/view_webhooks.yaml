@@ -1,0 +1,13 @@
+---
+name: view_webhooks
+runner_type: "run-python"
+description: View webhooks
+enabled: true
+entry_point: "view_webhooks.py"
+parameters:
+  api_key:
+    type: string
+    description: User API Key overriding the system key
+  token:
+    type: string
+    description: User oAuth Token overriding the system key
