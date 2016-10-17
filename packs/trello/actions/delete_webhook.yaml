@@ -16,5 +16,3 @@ parameters:
   token:
     type: string
     description: User oAuth Token overriding the system key
-
-    # /opt/stackstorm/packs/trello/actions# st2 run trello.delete_webhook webhook_id=58015d853fb0ea944c7d31ef

@@ -27,5 +27,3 @@ parameters:
   token:
     type: string
     description: User oAuth Token overriding the system key
-
-    # /opt/stackstorm/packs/trello/actions# st2 run trello.add_webhook id_model=57fd4730db86cb159461f4c2 callback_url=https://stackstorm.ebservicesllc.com/api/v1/webhooks/trello-stickycard?st2-api-key=OWQ5M2ZjMDI5ZWI3YjhkOGI5MmZiZDdlNmE5M2EyYmNlNGMxN2QwMDNhZGFiYWMzYzE3ZDRiMDY5OTM2ZDljYQ
