@@ -6,6 +6,7 @@ class DeleteWebhookAction(action.BaseAction):
         if api_key:
             self._set_creds(api_key=api_key, token=token)
 
+        hooks = []
         hooks = self._client().list_hooks(token)
 
         if hooks:
