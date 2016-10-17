@@ -1,0 +1,38 @@
+---
+name: add_stackstorm_webhook
+runner_type: "run-python"
+description: Add a Trello webhook with a StackStorm callback
+enabled: true
+entry_point: "add_stackstorm_webhook.py"
+parameters:
+  st2_domain:
+    type: string
+    description: The domain StackStorm can be reached at
+    position: 0
+  st2_url:
+    type: string
+    description: The webhook URL as defined in a StackStorm rule
+    position: 1
+  st2_api_key:
+    type: string
+    description: A StackStorm API key
+    position: 2
+  id_model:
+    type: string
+    description: ID of the model that should be hooked
+    position: 3
+    required: true
+  description:
+    type: string
+    description: Webhook description
+    default: Webhook created by StackStorm
+    position: 4
+    required: false
+  api_key:
+    type: string
+    description: User API Key overriding the system key
+  token:
+    type: string
+    description: User oAuth Token overriding the system key
+
+    # /opt/stackstorm/packs/trello/actions# st2 run trello.add_stackstorm_webhook st2_domain=stackstorm.ebservicesllc.com st2_url=trello-stickycard st2_api_key=OWQ5M2ZjMDI5ZWI3YjhkOGI5MmZiZDdlNmE5M2EyYmNlNGMxN2QwMDNhZGFiYWMzYzE3ZDRiMDY5OTM2ZDljYQ id_model=57fd4730db86cb159461f4c2
