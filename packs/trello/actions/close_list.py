@@ -9,4 +9,7 @@ class CloseListAction(action.BaseAction):
         trello_list = self._client().get_board(board_id).get_list(list_id)
         trello_list.close()
 
-        return trello_list.closed
+        if trello_list.closed:
+            return trello_list.closed
+        else:
+            return (False, "Failed to close trello_list")

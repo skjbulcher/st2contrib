@@ -11,4 +11,4 @@ class AddListAction(action.BaseAction):
         if new_list:
             return new_list.id
         else:
-            return False
+            return (False, "Failed to add list")

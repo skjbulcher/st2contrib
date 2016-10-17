@@ -7,4 +7,4 @@ class AddBoardAction(action.BaseAction):
             self._set_creds(api_key=api_key, token=token)
 
         new_board = self._client().add_board(name)
-        return new_board.id if new_board else False
+        return new_board.id if new_board else (False, "Failed to add board")

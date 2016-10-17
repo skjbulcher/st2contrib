@@ -13,4 +13,4 @@ class AddCardAction(action.BaseAction):
         if card:
             return card.id
         else:
-            return False
+            return (False, "Failed to add card")

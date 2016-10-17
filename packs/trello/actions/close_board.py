@@ -9,4 +9,7 @@ class CloseBoardAction(action.BaseAction):
         board = self._client().get_board(board_id)
         board.close()
 
-        return board.closed
+        if board.closed:
+            return board.closed
+        else:
+            return (False, "Failed to close board")

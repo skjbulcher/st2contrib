@@ -9,4 +9,7 @@ class CloseCardAction(action.BaseAction):
         card = self._client.get_card(card_id)
         card.set_closed()
 
-        return card.closed
+        if card.closed:
+            return card.closed
+        else:
+            return (False, "Failed to close card")
