@@ -12,7 +12,7 @@ class DeleteWebhookAction(action.BaseAction):
             for hook in hooks:
                 if hook.id == webhook_id:
                     hook.delete()
-                    return webhook_id
+                    return (True, "")
         else:
             return (False, "Trello did not return any hooks")
 
