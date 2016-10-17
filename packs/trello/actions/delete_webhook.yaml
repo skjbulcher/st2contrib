@@ -1,0 +1,20 @@
+---
+name: delete_webhook
+runner_type: "run-python"
+description: Delete a Trello webhook
+enabled: true
+entry_point: "delete_webhook.py"
+parameters:
+  webhook_id:
+    type: string
+    description: ID of the webhook that should be deleted
+    position: 0
+    required: true
+  api_key:
+    type: string
+    description: User API Key overriding the system key
+  token:
+    type: string
+    description: User oAuth Token overriding the system key
+
+    # /opt/stackstorm/packs/trello/actions# st2 run trello.delete_webhook webhook_id=58015d853fb0ea944c7d31ef
