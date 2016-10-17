@@ -1,0 +1,31 @@
+---
+name: add_webhook
+runner_type: "run-python"
+description: Add a Trello webhook
+enabled: true
+entry_point: "add_webhook.py"
+parameters:
+  callback_url:
+    type: string
+    description: URL for Trello to call when updates occur to the specified ID model
+    position: 0
+    required: true
+  id_model:
+    type: string
+    description: ID of the model that should be hooked
+    position: 1
+    required: true
+  description:
+    type: string
+    description: Webhook description
+    default: Webhook created by StackStorm
+    position: 2
+    required: false
+  api_key:
+    type: string
+    description: User API Key overriding the system key
+  token:
+    type: string
+    description: User oAuth Token overriding the system key
+
+    # /opt/stackstorm/packs/trello/actions# st2 run trello.add_webhook id_model=57fd4730db86cb159461f4c2 callback_url=https://stackstorm.ebservicesllc.com/api/v1/webhooks/trello-stickycard?st2-api-key=OWQ5M2ZjMDI5ZWI3YjhkOGI5MmZiZDdlNmE5M2EyYmNlNGMxN2QwMDNhZGFiYWMzYzE3ZDRiMDY5OTM2ZDljYQ
